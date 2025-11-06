@@ -21,19 +21,19 @@ from absl import flags, app #type: ignore
 import numpy as np
 import pandas as pd
 
-import ffm
-from ffm import data_loader, FFmHparams
+from fincast import ffm
+from fincast.ffm import data_loader, FFmHparams
 
 import torch
 import tqdm
 
 import argparse
 import logging
-from tools.utils import log_model_statistics, make_logging_file 
-from tools.model_utils import get_model_FFM, plot_predictions 
+from fincast.tools.utils import log_model_statistics, make_logging_file 
+from fincast.tools.model_utils import get_model_FFM, plot_predictions 
 
 from Freq_map_eval import Freq_map_dict
-from data_tools.TSdataset import freq_reader
+from fincast.data_tools.TSdataset import freq_reader
 
 FLAGS = flags.FLAGS
 

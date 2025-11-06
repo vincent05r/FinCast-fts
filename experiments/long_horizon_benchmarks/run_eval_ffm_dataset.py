@@ -5,7 +5,7 @@ import time
 import os
 import numpy as np
 from run_eval_ffm_stock import eval, get_model_api  
-from data_tools.TSdataset import find_files_with_suffix
+from fincast.data_tools.TSdataset import find_files_with_suffix
 
 
 def average_results(results_list):

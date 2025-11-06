@@ -18,7 +18,7 @@ from torch import nn
 import torch.nn.functional as F
 
 #MOE mod
-from st_moe_pytorch import MoE, SparseMoEBlock
+from fincast.st_moe_pytorch import MoE, SparseMoEBlock
 
 
 def create_quantiles() -> list[float]:

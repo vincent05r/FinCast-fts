@@ -19,7 +19,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler # type: ignore
 import tensorflow as tf # type: ignore
-from . import time_features
+from fincast.ffm import time_features
 
 
 class TimeSeriesdata(object):

@@ -1,6 +1,6 @@
 import torch
 from collections import defaultdict
-from data_tools.batch_sampler_ddp import GroupByLengthBatchSampler_DDP
+from fincast.data_tools.batch_sampler_ddp import GroupByLengthBatchSampler_DDP
 
 # Mock dataset with custom lengths
 class MockDataset:
