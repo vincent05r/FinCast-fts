@@ -3,7 +3,7 @@ import os
 import re
 
 
-from ffm.pytorch_patched_decoder_MOE import PatchedTimeSeriesDecoder_MOE
+from fincast.ffm.pytorch_patched_decoder_MOE import PatchedTimeSeriesDecoder_MOE
 
 
 

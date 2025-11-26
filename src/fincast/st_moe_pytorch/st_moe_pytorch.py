@@ -18,7 +18,7 @@ from colt5_attention import topk as maybe_differentiable_topk # type: ignore
 
 import torch.distributed as dist
 
-from st_moe_pytorch.distributed import (
+from fincast.st_moe_pytorch.distributed import (
     AllGather,
     split_by_rank,
     gather_sizes,

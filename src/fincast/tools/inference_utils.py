@@ -13,14 +13,14 @@ from torch.utils.data import Dataset, DataLoader
 
 
 #modules
-from ffm import FFM, FFmHparams
+from fincast.ffm import FFM, FFmHparams
 
-from ffm.pytorch_patched_decoder_MOE import PatchedTimeSeriesDecoder_MOE
+from fincast.ffm.pytorch_patched_decoder_MOE import PatchedTimeSeriesDecoder_MOE
 
-from tools.utils import log_model_statistics, make_logging_file 
-from tools.model_utils import get_model_FFM
+from fincast.tools.utils import log_model_statistics, make_logging_file 
+from fincast.tools.model_utils import get_model_FFM
 
-from data_tools.Inference_dataset import *
+from fincast.data_tools.Inference_dataset import *
 from contextlib import nullcontext
 
 

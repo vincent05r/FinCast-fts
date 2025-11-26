@@ -20,10 +20,10 @@ from typing import Any, Literal, Sequence
 import numpy as np
 import pandas as pd
 
-from .pytorch_patched_decoder_MOE import create_quantiles
+from fincast.ffm.pytorch_patched_decoder_MOE import create_quantiles
 from utilsforecast.processing import make_future_dataframe # type: ignore
 
-from . import xreg_lib
+from fincast.ffm import xreg_lib
 
 Category = xreg_lib.Category
 XRegMode = xreg_lib.XRegMode

@@ -1,14 +1,13 @@
 .venv/
+*.egg-info
 dist/
 __pycache__/
 checkpoints/
 wandb/
 datasets/
-timesfm_jax.egg-info/
 wt_vis/
 checkpoints/
 draft/
 logs/
-src/my_project.egg-info/
 results/long_horizon
 results/

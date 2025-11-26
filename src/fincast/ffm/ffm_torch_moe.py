@@ -16,9 +16,8 @@ from typing import Any, Sequence
 
 import numpy as np
 import torch
-from ffm import ffm_base
-
-from . import pytorch_patched_decoder_MOE as ppd
+from fincast.ffm import ffm_base
+from fincast.ffm import pytorch_patched_decoder_MOE as ppd
 
 _TOL = 1e-6
 

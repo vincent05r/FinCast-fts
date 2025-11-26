@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from torch.utils.data import Dataset
 
 #modules
-from ffm import FFM, FFmHparams
+from fincast.ffm import FFM, FFmHparams
 
 
 
@@ -104,5 +104,4 @@ def plot_predictions(
         print(f"Plot saved to {save_path}")
 
     plt.close()
-
 
