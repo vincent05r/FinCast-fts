@@ -206,22 +206,39 @@ class FinCast_Inference:
     def __init__(
             self,
             config: SimpleNamespace,
+            use_df: bool = False,
             ):
         
         self.config = config
 
         self.inference_freq = freq_reader_inference(config.data_frequency)
 
-        self.inference_dataset = TimeSeriesDataset_SingleCSV_Inference(csv_path=self.config.data_path,
-                                                                       context_length=self.config.context_len,
-                                                                       freq_type=self.inference_freq,
-                                                                       columns=self.config.columns_target,
-                                                                       first_c_date=True,
-                                                                       series_norm=self.config.series_norm,
-                                                                       dropna=getattr(self.config, "dropna", True),
-                                                                       sliding_windows=self.config.all_data,
-                                                                       return_meta=True,                                   # CHANGE: enable mapping output
-                                                                       )
+        if use_df:
+            self.inference_dataset = TimeSeriesDataset_SinglePandasDF_Inference(
+                df=self.config.df,
+                context_length=config.context_len,
+                freq_type=self.inference_freq,
+                columns=config.columns_target,
+                first_c_date=True,
+                series_norm=config.series_norm,
+                dropna=getattr(config, "dropna", True),
+                sliding_windows=config.all_data,
+                return_meta=True,
+                df_name="in_memory_df",
+            )
+
+        else:
+            self.inference_dataset = TimeSeriesDataset_SingleCSV_Inference(
+                csv_path=self.config.data_path,
+                context_length=self.config.context_len,
+                freq_type=self.inference_freq,
+                columns=self.config.columns_target,
+                first_c_date=True,
+                series_norm=self.config.series_norm,
+                dropna=getattr(self.config, "dropna", True),
+                sliding_windows=self.config.all_data,
+                return_meta=True,                                   # CHANGE: enable mapping output
+                )
         
 
 
