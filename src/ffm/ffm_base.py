@@ -147,7 +147,7 @@ class FFmHparams:
       of the checkpoint.
     num_layers: Number of transformer layers in the model.
     model_dims: Model dimension.
-    per_core_batch_size: Batch size on each core for data parallelism, high effect on performance
+    per_core_batch_size: Batch size on each core for data parallelism.
     backend: One of "cpu", "gpu" or "tpu".
     quantiles: Which quantiles are output by the model.
   """
